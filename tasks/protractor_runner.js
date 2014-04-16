@@ -39,10 +39,10 @@ module.exports = function(grunt) {
     grunt.verbose.writeln("Options: " + util.inspect(opts));
 
     var keepAlive = opts['keepAlive'];
-    var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "sauceUser", "sauceKey", "framework"];
-    var listArgs = ["specs"];
+    var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "sauceUser", "sauceKey", "framework", "allScriptsTimeout"];
+    var listArgs = ["specs", "exclude", "seleniumArgs"];
     var boolArgs = ["includeStackTrace", "verbose"];
-    var objectArgs = ["params", "capabilities", "cucumberOpts"];
+    var objectArgs = ["params", "capabilities", "cucumberOpts", "mochaOpts"];
 
     var args = [protractorBinPath, opts.configFile];
     if (opts.noColor){
